@@ -1,0 +1,43 @@
+{
+  "seed": 42,
+  "rows_original": 11958,
+  "rows_retained": 11790,
+  "empty_text_removed": 0,
+  "normalized_duplicate_rows_removed": 168,
+  "leakage": {
+    "train_vs_validation": 0,
+    "train_vs_all_tests": 0
+  },
+  "train_rows": 6497,
+  "validation_rows": 1625,
+  "test_rows": 3668,
+  "threshold": 0.14589301034960014,
+  "validation_fpr": 0.04925241864555849,
+  "validation_recall": 0.9979508196721312,
+  "training_seconds": 0.9116365000081714,
+  "total_seconds": 5.136538799997652,
+  "python_version": "3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]",
+  "packages": {
+    "pandas": "2.3.3"
+  },
+  "test_sets": {
+    "deepset_all": {
+      "rows": 656,
+      "positive": 258,
+      "negative": 398,
+      "recall": 0.38372093023255816
+    },
+    "gandalf_all": {
+      "rows": 999,
+      "positive": 999,
+      "negative": 0,
+      "recall": 0.934934934934935
+    },
+    "safeguard_test": {
+      "rows": 2013,
+      "positive": 630,
+      "negative": 1383,
+      "recall": 0.9968253968253968
+    }
+  }
+}

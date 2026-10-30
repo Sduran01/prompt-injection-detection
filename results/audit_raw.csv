@@ -1,0 +1,8 @@
+dataset,publisher_split,rows,columns,positive,negative,missing_text,missing_label,exact_duplicate_text_rows,timestamp,entity_id
+safeguard,train,8236,2,2496,5740,0,0,113,unavailable (no timestamp field),unavailable (no entity identifier)
+safeguard,test,2060,2,650,1410,0,0,11,unavailable (no timestamp field),unavailable (no entity identifier)
+deepset,train,546,2,203,343,0,0,0,unavailable (no timestamp field),unavailable (no entity identifier)
+deepset,test,116,2,60,56,0,0,0,unavailable (no timestamp field),unavailable (no entity identifier)
+gandalf,train,777,2,777,0,0,0,0,unavailable (no timestamp field),unavailable (no entity identifier)
+gandalf,validation,111,2,111,0,0,0,0,unavailable (no timestamp field),unavailable (no entity identifier)
+gandalf,test,112,2,112,0,0,0,0,unavailable (no timestamp field),unavailable (no entity identifier)
