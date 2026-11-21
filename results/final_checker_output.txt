@@ -1,0 +1,90 @@
+split.csv: 11790 rows. scores.csv: 3668 rows, 3 value(s), 1 column(s).
+Values: safeguard, deepset, gandalf
+
+Rows per dataset and split
+--------------------------
+  dataset      split  rows  positive  negative  positive %
+  deepset       test   656       258       398       39.33
+  gandalf       test   999       999         0      100.00
+safeguard      train  6497      1951      4546       30.03
+safeguard validation  1625       488      1137       30.03
+safeguard       test  2013       630      1383       31.30
+
+Metrics per value and column (positive when score >= the threshold)
+-------------------------------------------------------------------
+Each value is followed by its 95% bootstrap interval in brackets.
+
+Value: safeguard   Column: logistic_regression
+  threshold                 0.145893
+  test rows                 2013
+  positive rows             630 (31.30%)
+  negative rows             1383 (68.70%)
+  bootstrap resamples       1000
+  random-scorer AP          0.3130 (equals the positive share)
+  random-scorer AUROC       0.5000
+  precision                 0.9168 [0.8947, 0.9371]
+  recall                    0.9968 [0.9919, 1.0000]
+  false-positive rate       0.0412 [0.0309, 0.0525]
+  AP                        0.9988 [0.9976, 0.9997]
+  AUROC                     0.9993 [0.9986, 0.9999]
+
+Value: deepset   Column: logistic_regression
+  threshold                 0.145893
+  test rows                 656
+  positive rows             258 (39.33%)
+  negative rows             398 (60.67%)
+  bootstrap resamples       1000
+  random-scorer AP          0.3933 (equals the positive share)
+  random-scorer AUROC       0.5000
+  precision                 0.8319 [0.7622, 0.8971]
+  recall                    0.3837 [0.3212, 0.4436]
+  false-positive rate       0.0503 [0.0296, 0.0751]
+  AP                        0.6875 [0.6325, 0.7455]
+  AUROC                     0.7308 [0.6857, 0.7727]
+
+Value: gandalf   Column: logistic_regression
+  threshold                 0.145893
+  test rows                 999
+  positive rows             999 (100.00%)
+  negative rows             0 (0.00%)
+  bootstrap resamples       1000
+  one class only (positive): report recall only
+  recall                    0.9349 [0.9199, 0.9489]
+
+Results table: recall [95% interval] (copy into section 1(d))
+-------------------------------------------------------------
+A one-class cell holds the metric the checker prints for it, named in parentheses.
+
+Column: logistic_regression
+  safeguard   0.9968 [0.9919, 1.0000]
+  deepset     0.3837 [0.3212, 0.4436]
+  gandalf     0.9349 [0.9199, 0.9489]
+
+Difference from the baseline value 'safeguard' (copy into section 1(e))
+-----------------------------------------------------------------------
+Difference = the value's metric minus the baseline value's metric in the same column.
+Direction of interest: either. Change = the size of the difference.
+The verdict in section 1(e) compares the change with your yes and no differences.
+
+Column: logistic_regression
+  deepset     difference -0.6131   change +0.6131 (recall)
+  gandalf     difference -0.0619   change +0.0619 (recall)
+
+Error sample (section 4)
+------------------------
+Value: deepset   Column: logistic_regression
+  misclassified rows available   20 false positives, 159 false negatives
+  sampled                        10 false positives, 10 false negatives
+
+error                                  false positive  false negative  total
+category                                                                    
+Multilingual attack                                 0               6      6
+Short benign topical request                        5               0      5
+German benign request                               4               0      4
+English instruction redirection                     0               3      3
+Context fabrication                                 0               1      1
+Extended benign informational request               1               0      1
+
+Warnings
+--------
+- value safeguard, column logistic_regression: recall, AP, AUROC at or above 0.99. Name the leakage check you ran and its result in section 1(c).

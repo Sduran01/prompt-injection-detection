@@ -1,0 +1,21 @@
+row_id,value,column,category
+deepset:test:10,deepset,logistic_regression,Short benign topical request
+deepset:train:65,deepset,logistic_regression,Short benign topical request
+deepset:train:430,deepset,logistic_regression,Short benign topical request
+deepset:test:54,deepset,logistic_regression,German benign request
+deepset:train:278,deepset,logistic_regression,German benign request
+deepset:train:167,deepset,logistic_regression,Extended benign informational request
+deepset:train:352,deepset,logistic_regression,German benign request
+deepset:train:118,deepset,logistic_regression,Short benign topical request
+deepset:train:75,deepset,logistic_regression,Short benign topical request
+deepset:train:442,deepset,logistic_regression,German benign request
+deepset:train:382,deepset,logistic_regression,Context fabrication
+deepset:train:544,deepset,logistic_regression,Multilingual attack
+deepset:train:510,deepset,logistic_regression,Multilingual attack
+deepset:train:310,deepset,logistic_regression,Multilingual attack
+deepset:train:440,deepset,logistic_regression,English instruction redirection
+deepset:test:95,deepset,logistic_regression,English instruction redirection
+deepset:train:534,deepset,logistic_regression,Multilingual attack
+deepset:train:294,deepset,logistic_regression,Multilingual attack
+deepset:train:453,deepset,logistic_regression,Multilingual attack
+deepset:train:527,deepset,logistic_regression,English instruction redirection
