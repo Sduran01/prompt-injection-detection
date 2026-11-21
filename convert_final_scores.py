@@ -2,7 +2,7 @@
 import pandas as pd
 
 # Load original midsemester predictions
-scores = pd.read_csv("scores.csv")
+scores = pd.read_csv("scores_midsemester.csv")
 
 # Convert dataset names into experimental values
 dataset_names = {
@@ -28,7 +28,7 @@ final_scores = scores[
     ["row_id", "value", "column", "label", "score", "threshold"]
 ]
 
-final_scores.to_csv("scores_final.csv", index=False)
+final_scores.to_csv("scores.csv", index=False)
 
 print(f"Exported {len(final_scores)} predictions")
 print(final_scores.groupby(["value", "column"]).size())
